@@ -47,6 +47,8 @@ img {
 /*===================header===============*/
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -78,6 +80,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-contact {
@@ -109,12 +112,45 @@ img {
   color: #2e2f42;
   padding: 24px 0;
   display: block;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link.current {
+  position: relative;
+}
+
+.menu-link.current::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+}
+
+.menu-link.current:hover,
+.menu-link.current:focus {
+  color: #404bbf;
 }
 
 /*==================general section=============*/
 .general-section {
   background: #2e2f42;
-padding: 188px 0 188px;
+  padding: 188px 0 188px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .title-text {
@@ -168,12 +204,27 @@ padding: 188px 0 188px;
 }
 
 .section-avant {
-    padding: 120px 0;
+  padding: 120px 0;
 }
 
 .all-avant {
   display: flex;
- gap: 24px;
+  gap: 24px;
+}
+
+.div-icons {
+  max-height: 112px;
+  padding: 24px 100px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background: #f4f4fd;
+  margin-bottom: 8px;
+}
+
+.icons-avant {
+  fill: none;
+  max-width: 100%;
+  height: 64px;
 }
 
 .all-avant-item {
@@ -220,18 +271,18 @@ padding: 188px 0 188px;
   text-transform: capitalize;
   margin-left: auto;
   margin-right: auto;
-  
+
   margin-bottom: 72px;
 }
 
 .team-all {
   display: flex;
-  
+
   gap: 24px;
 }
 
 .card-worker {
-    padding: 32px 0;
+  padding: 32px 0;
 }
 
 .team-card-title {
@@ -252,13 +303,12 @@ padding: 188px 0 188px;
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
-  
 }
 /*=========portfolio section===============*/
 
 .port-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .port-section-title {
@@ -272,27 +322,22 @@ padding: 188px 0 188px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 72px;
-  
 }
-
-
 
 .port-menu {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
-  
 }
 
 .port-menu-item {
   width: calc((100% - 48px) / 3);
-  
 }
 
 .additions {
-    padding: 32px 16px;
-    border: 1px solid #e7e9fc;
-    border-top: none;
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .port-menu-title {
@@ -302,7 +347,6 @@ padding: 188px 0 188px;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-  
 }
 
 .port-menu-text {
@@ -311,11 +355,8 @@ padding: 188px 0 188px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  
 }
 /*==============footer section==========*/
-
-
 
 .dawn-logo {
   font-family: "Raleway", sans-serif;
@@ -325,7 +366,7 @@ padding: 188px 0 188px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  display:inline-block;
+  display: inline-block;
   margin-bottom: 16px;
 }
 
@@ -340,7 +381,6 @@ padding: 188px 0 188px;
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
-  
 }
 
 .section-dawn {
