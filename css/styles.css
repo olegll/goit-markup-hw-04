@@ -288,7 +288,7 @@ img {
 }
 
 .card-worker {
-  padding: 32px 0 8px 0;
+  padding: 32px 0;
 }
 
 .team-card-title {
@@ -309,10 +309,7 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
-}
-
-.social-worker-icons {
-  padding-bottom: 32px;
+  margin-bottom: 8px;
 }
 
 .social-list {
